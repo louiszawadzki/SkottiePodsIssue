@@ -10,8 +10,10 @@
     "test": "jest"
   },
   "dependencies": {
+    "@shopify/react-native-skia": "^1.5.0",
     "react": "18.3.1",
-    "react-native": "0.75.4"
+    "react-native": "0.75.4",
+    "react-native-skottie": "^2.1.4"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
