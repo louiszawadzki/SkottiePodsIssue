@@ -1,0 +1,37 @@
+{
+    "name": "react-native-skia-skottie",
+    "version": "2.1.4",
+    "summary": "Efficient lottie animations in react native using Skia's Skottie module",
+    "homepage": "https://github.com/margelo/react-native-skottie#readme",
+    "license": "MIT",
+    "authors": "Margelo GmbH <hanno@margelo.io> (https://github.com/margelo)",
+    "platforms": {
+        "ios": "12.4"
+    },
+    "source": {
+        "git": "https://github.com/margelo/react-native-skia-skottie.git",
+        "tag": "2.1.4"
+    },
+    "pod_target_xcconfig": {
+        "GCC_PREPROCESSOR_DEFINITIONS": "$(inherited) SK_METAL=1 SK_GANESH=1",
+        "CLANG_CXX_LANGUAGE_STANDARD": "c++17",
+        "HEADER_SEARCH_PATHS": "\"$(PODS_TARGET_SRCROOT)/cpp/\"/** \"/Users/me/SkottiePodsIssue/node_modules/react-native-skottie/../@shopify/react-native-skia/cpp/**\" "
+    },
+    "prepare_command": "mkdir -p libs/\nrm -rf libs/ios\nmkdir -p libs/ios\ncp -r \"/Users/me/SkottiePodsIssue/node_modules/react-native-skottie/../@shopify/react-native-skia/libs/ios/libsksg.xcframework\" libs/ios/\ncp -r \"/Users/me/SkottiePodsIssue/node_modules/react-native-skottie/../@shopify/react-native-skia/libs/ios/libskottie.xcframework\" libs/ios/",
+    "ios": {
+        "vendored_frameworks": [
+            "libs/ios/libsksg.xcframework",
+            "libs/ios/libskottie.xcframework"
+        ]
+    },
+    "source_files": [
+        "ios/**/*.{h,m,mm}",
+        "cpp/**/*.{h,cpp}"
+    ],
+    "dependencies": {
+        "React": [],
+        "React-Core": [],
+        "react-native-skia": [],
+        "SSZipArchive": []
+    }
+}
